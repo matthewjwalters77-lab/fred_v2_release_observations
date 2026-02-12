@@ -10,7 +10,7 @@ FRED API V1 required each series to be called to retrieve observations. Version 
 ![Example Series Trend](https://mwalters-data-storage.atl1.cdn.digitaloceanspaces.com/Fabric_FRED_Data_Pipeline/Example_FRED_Report_Trend.png)
 
 # Goal
-The goal of this project is to call the FRED API V2 using a Microsoft Fabrice Notebook, ingest release data into a Fabric Lakehouse, then build a direct-lake semantic model from the lakehouse.
+The goal of this project is to call the FRED API V2 using a Microsoft Fabric Notebook, ingest release data into a Fabric Lakehouse, then build a direct-lake semantic model from the lakehouse.
 
 # Data Process
 1. Date table is built in Spark Dataframe from year parameter.
