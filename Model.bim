@@ -1,0 +1,682 @@
+{
+  "name": "fred_semantic_model",
+  "id": "a78b6f6d-2edb-42e6-a4cf-f26091a11f68",
+  "compatibilityLevel": 1604,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "discourageImplicitMeasures": true,
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "dim_fred_series",
+        "lineageTag": "7e5fd6d5-bc65-4d32-b1a4-f55f09316bf0",
+        "sourceLineageTag": "[dbo].[dim_fred_series]",
+        "columns": [
+          {
+            "name": "series_id",
+            "dataType": "string",
+            "sourceColumn": "series_id",
+            "lineageTag": "5936023c-6d38-4453-9593-2c2077c22948",
+            "sourceLineageTag": "series_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title",
+            "lineageTag": "221d5c97-0a97-4243-a21e-7dc7313ff3c2",
+            "sourceLineageTag": "title",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "frequency",
+            "dataType": "string",
+            "sourceColumn": "frequency",
+            "lineageTag": "84ff36c7-4921-433b-ad0b-95a4986e3bad",
+            "sourceLineageTag": "frequency",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "units",
+            "dataType": "string",
+            "sourceColumn": "units",
+            "lineageTag": "9bcb550e-1a45-41b8-a491-63789fe0de1e",
+            "sourceLineageTag": "units",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "seasonal_adjustment",
+            "dataType": "string",
+            "sourceColumn": "seasonal_adjustment",
+            "lineageTag": "ceb54c25-ff91-4a96-8dba-37827616c8db",
+            "sourceLineageTag": "seasonal_adjustment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "last_update",
+            "dataType": "string",
+            "sourceColumn": "last_update",
+            "lineageTag": "c1878631-8bdd-4865-8404-44de82b53907",
+            "sourceLineageTag": "last_update",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "copyright_id",
+            "dataType": "string",
+            "sourceColumn": "copyright_id",
+            "lineageTag": "e038cd9a-376c-4f41-9202-dbabd7e9a3f0",
+            "sourceLineageTag": "copyright_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "notes",
+            "dataType": "string",
+            "sourceColumn": "notes",
+            "lineageTag": "d03dbc63-58c3-439f-b5bc-0db0195e70aa",
+            "sourceLineageTag": "notes",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "updated",
+            "dataType": "dateTime",
+            "sourceColumn": "updated",
+            "formatString": "General Date",
+            "lineageTag": "1a0c4ea0-70e3-44fd-8938-88f03bb2744b",
+            "sourceLineageTag": "updated",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_fred_series",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_fred_series",
+              "expressionSource": "DirectLake - Semantic Model",
+              "schemaName": "dbo"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_date",
+        "lineageTag": "74212f9e-c40b-43e0-bbf9-22509d474691",
+        "sourceLineageTag": "[dbo].[dim_date]",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "formatString": "m/d/yy",
+            "lineageTag": "063efdc1-33dd-443f-b8a7-227afdd7ba66",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ]
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "formatString": "0",
+            "lineageTag": "c29cba13-d61a-45a1-98e2-49769ac1eaf6",
+            "sourceLineageTag": "year",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "month_number",
+            "dataType": "int64",
+            "sourceColumn": "month_number",
+            "formatString": "0",
+            "lineageTag": "cdd83218-2cf4-4c05-8053-287beabadd5f",
+            "sourceLineageTag": "month_number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "month_name",
+            "dataType": "string",
+            "sourceColumn": "month_name",
+            "sortByColumn": "month_number",
+            "lineageTag": "d32e4b26-e1ec-4c47-9dd1-02679b57e525",
+            "sourceLineageTag": "month_name",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "month_name_short",
+            "dataType": "string",
+            "sourceColumn": "month_name_short",
+            "sortByColumn": "month_number",
+            "lineageTag": "4e5077b0-63f0-43bc-8d26-b1b64ad62c8a",
+            "sourceLineageTag": "month_name_short",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "quarter",
+            "dataType": "int64",
+            "sourceColumn": "quarter",
+            "formatString": "0",
+            "lineageTag": "8d88a5f8-c9c8-4330-aed3-1164ea3b50cc",
+            "sourceLineageTag": "quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "day_name",
+            "dataType": "string",
+            "sourceColumn": "day_name",
+            "lineageTag": "e2764910-4850-45dd-b24f-59c85bdf78fd",
+            "sourceLineageTag": "day_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "day_of_week_number",
+            "dataType": "int64",
+            "sourceColumn": "day_of_week_number",
+            "formatString": "0",
+            "lineageTag": "79091bb1-c4a2-4b64-973d-fbdf01b3d862",
+            "sourceLineageTag": "day_of_week_number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "year_month_key",
+            "dataType": "int64",
+            "sourceColumn": "year_month_key",
+            "formatString": "0",
+            "lineageTag": "abdb54e6-2364-499a-b973-bf6553726e06",
+            "sourceLineageTag": "year_month_key",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "MMM-YYYY",
+            "dataType": "string",
+            "sourceColumn": "MMM-YYYY",
+            "sortByColumn": "year_month_key",
+            "lineageTag": "a1d92b6d-d486-4940-8516-0839b5bdda3e",
+            "sourceLineageTag": "MMM-YYYY",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "week_start_date",
+            "dataType": "dateTime",
+            "sourceColumn": "week_start_date",
+            "formatString": "m/d/yy",
+            "lineageTag": "f903eb0d-a5f2-45f2-a394-0fe1a4d4692e",
+            "sourceLineageTag": "week_start_date",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ]
+          },
+          {
+            "name": "week_end_date",
+            "dataType": "dateTime",
+            "sourceColumn": "week_end_date",
+            "formatString": "m/d/yy",
+            "lineageTag": "054e98d2-cc1c-41a0-ad99-6807b803eba1",
+            "sourceLineageTag": "week_end_date",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_date",
+              "expressionSource": "DirectLake - Semantic Model",
+              "schemaName": "dbo"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_fred_observations",
+        "lineageTag": "f7dc80d6-3d26-484b-8c2a-4d62c6aea61e",
+        "sourceLineageTag": "[dbo].[fact_fred_observations]",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "date",
+            "formatString": "m/d/yy",
+            "lineageTag": "06626a72-b837-4006-871c-b855448b139b",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              },
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ]
+          },
+          {
+            "name": "series_id",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "series_id",
+            "lineageTag": "06a3dce3-f746-4890-966e-adb4cf0d526d",
+            "sourceLineageTag": "series_id",
+            "summarizeBy": "none",
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "value",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "value",
+            "lineageTag": "dd60f6fc-260e-41fc-9369-d5a1c786b03f",
+            "sourceLineageTag": "value",
+            "summarizeBy": "sum",
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_fred_observations",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "fact_fred_observations",
+              "expressionSource": "DirectLake - Semantic Model",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "base_measure",
+            "expression": [
+              "",
+              "IF( HASONEVALUE( dim_fred_series[series_id] ),",
+              "    AVERAGE( fact_fred_observations[value] )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "isHidden": true,
+            "lineageTag": "c5dff7ad-4be1-4525-9bcf-972f137cc4fb",
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              },
+              {
+                "property": "IsHidden"
+              }
+            ]
+          },
+          {
+            "name": "MoM%",
+            "expression": [
+              "",
+              "VAR _current = [base_measure]",
+              "VAR _prev = CALCULATE( [base_measure], DATEADD( dim_date[date], -1, MONTH ) )",
+              "RETURN",
+              "IF( NOT ISBLANK( _current ) && NOT ISBLANK( _prev ),",
+              "    DIVIDE( _current - _prev, _prev )",
+              ")"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "c8daa706-fa90-49f9-a889-dab9c1b0e170",
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              }
+            ]
+          },
+          {
+            "name": "YoY%",
+            "expression": [
+              "",
+              "VAR _current = [base_measure]",
+              "VAR _prev = CALCULATE( [base_measure], DATEADD( dim_date[date], -1, YEAR ) )",
+              "RETURN",
+              "IF( NOT ISBLANK( _current ) && NOT ISBLANK( _prev ),",
+              "    DIVIDE( _current - _prev, _prev )",
+              ")"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "48298c33-6c13-4855-b6e5-1384cd51cddd",
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              }
+            ]
+          },
+          {
+            "name": "Total Chg%",
+            "expression": [
+              "",
+              "VAR _prev =",
+              "CALCULATE(",
+              "    FIRSTNONBLANKVALUE( dim_date[date], [base_measure] ),",
+              "    ALLSELECTED( dim_date )",
+              ")",
+              "VAR _current = [base_measure]",
+              "RETURN",
+              "IF( NOT ISBLANK( _current ) && NOT ISBLANK( _prev ),",
+              "    DIVIDE( _current - _prev, _prev )",
+              ")"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "f24f3bd2-99f0-481a-ad21-ee7573108612",
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "d8ad4c16-2611-6d5a-a1e7-fccf4c7233c6",
+        "fromTable": "fact_fred_observations",
+        "fromColumn": "series_id",
+        "toTable": "dim_fred_series",
+        "toColumn": "series_id",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "763d0918-e51b-4fec-8d22-cacfc2cdd2cc",
+        "fromTable": "fact_fred_observations",
+        "fromColumn": "date",
+        "toTable": "dim_date",
+        "toColumn": "date",
+        "relyOnReferentialIntegrity": true
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DirectLake - Semantic Model",
+        "kind": "m",
+        "expression": [
+          "let",
+          "    workspace_id = \"[Paste target workspace_id]\",",
+          "    lakehouse_id = \"[Paste target lakehouse_id]\",",
+          "    Source = AzureStorage.DataLake(\"https://onelake.dfs.fabric.microsoft.com/\" & workspace_id & \"/\" & lakehouse_id, [HierarchicalNavigation=true])",
+          "in",
+          "    Source"
+        ],
+        "lineageTag": "c7c128ed-257d-4d60-a297-ee9e1b792570",
+        "annotations": [
+          {
+            "name": "PBI_IncludeFutureArtifacts",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DirectLake - LH_Public_Data\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "__LastRPTime",
+        "value": "134152350476471313"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DirectLakeOnOneLakeInWeb\",\"WebModelingEdit\",\"RemoteModeling\"]"
+      },
+      {
+        "name": "__TEdtr",
+        "value": "1"
+      },
+      {
+        "name": "TabularEditor_SerializeOptions",
+        "value": "{\"IgnoreInferredObjects\":true,\"IgnoreInferredProperties\":true,\"IgnoreTimestamps\":true,\"SplitMultilineStrings\":true,\"PrefixFilenames\":false,\"LocalTranslations\":false,\"LocalPerspectives\":false,\"SortArrays\":false,\"LocalRelationships\":false,\"Levels\":[\"Data Sources\",\"Shared Expressions\",\"Perspectives\",\"Relationships\",\"Roles\",\"Tables\",\"Tables/Columns\",\"Tables/Hierarchies\",\"Tables/Measures\",\"Tables/Partitions\",\"Tables/Calculation Items\",\"Translations\"]}"
+      }
+    ]
+  }
+}
